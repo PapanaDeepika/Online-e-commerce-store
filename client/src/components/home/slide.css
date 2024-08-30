@@ -104,7 +104,7 @@
 .products_section .products_items p{
     margin-top: 10px;
 }
-
+/* 
 @media (max-width:768px){
     .slide_part .right_slide{
      display: none;
@@ -118,4 +118,4 @@
         object-fit: cover;
         height: 120px;
     }
-}
+} */
