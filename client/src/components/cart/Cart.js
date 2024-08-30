@@ -9,19 +9,12 @@ import { Logincontext } from "../context/Contextprovider";
 const Cart = () => {
 
     const { account, setAccount } = useContext(Logincontext);
-    // console.log(account);
-
-
 
     const { id } = useParams("");
-    // console.log(id);
-
+    
     const history = useHistory();
 
     const [inddata, setIndedata] = useState("");
-
-    // console.log([inddata]);
-
     const getinddata = async () => {
         const res = await fetch(`/getproductsone/${id}`, {
             method: "GET",
@@ -33,16 +26,14 @@ const Cart = () => {
         });
 
         const data = await res.json();
-        // console.log(data);
-
+ 
         if (res.status !== 201) {
             alert("no data available")
         } else {
-            // console.log("ind mila hain");
+            
             setIndedata(data);
         }
     };
-
     useEffect(() => {
         setTimeout(getinddata, 1000)
     }, [id]);
@@ -61,16 +52,15 @@ const Cart = () => {
             credentials: "include"
         });
         // console.log(check);
-        const data1 = await check.json();
-        // console.log(data1 +  'ok');
-
-        if (check.status !== 201) {
-            alert("no data available")
-        } else {
-            // console.log("cart add ho gya hain");
-            setAccount(data1)
-            history.push("/buynow");
-        }
+        // const data1 = await check.json();
+      
+        // if (check.status !== 201) {
+        //     alert("no data available")
+        // } else {
+        //     // console.log("cart add ho gya hain");
+        //     setAccount(data1)
+        //     history.push("/buynow");
+        // }
     }
 
 
@@ -95,11 +85,11 @@ const Cart = () => {
                         <p>Deal of the Day : <span style={{ color: "#B12704" }}>₹{inddata.price.cost}.00</span></p>
                         <p>You save : <span style={{ color: "#B12704" }}> ₹{inddata.price.mrp - inddata.price.cost} ({inddata.price.discount}) </span></p>
 
-                        <div className="discount_box">
+                        {/* <div className="discount_box">
                             <h5 >Discount : <span style={{ color: "#111" }}>{inddata.discount}</span> </h5>
                             <h4>FREE Delivery : <span style={{ color: "#111", fontWeight: "600" }}>Oct 8 - 21</span> Details</h4>
                             <p style={{ color: "#111" }}>Fastest delivery: <span style={{ color: "#111", fontWeight: "600" }}> Tomorrow 11AM</span></p>
-                        </div>
+                        </div> */}
                         <p className="description">About the Iteam : <span style={{ color: "#565959", fontSize: "14px", fontWeight: "500", letterSpacing: "0.4px" }}>{inddata.description}</span></p>
                     </div>
                 </div>
