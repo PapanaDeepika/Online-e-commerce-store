@@ -46,15 +46,25 @@ const Navbaar = () => {
     }, [dispatch])
 
 
-    const [open, setOpen] = useState(false);
-    const [liopen, setLiopen] = useState(true);
+    const [open, setOpen] = useState();
 
+        // account ? <Button id="basic-button"
+        // aria-controls="basic-menu"
+        // aria-haspopup="true"
+        // aria-expanded={open ? 'true' : undefined}
+        // onClick={handleClick}> <Avatar className="avtar2" title={account.fname.toUpperCase()}>{account.fname[0].toUpperCase()}</Avatar>  </Button> : <Button id="basic-button"
+        //     aria-controls="basic-menu"
+        //     aria-haspopup="true"
+        //     aria-expanded={open ? 'true' : undefined}
+        //     onClick={handleClick}> <Avatar className="avtar" />
+        // </Button>
     const [dropen, setDropen] = useState(false);
 
     const handleClick = (event) => {
         setOpen(event.currentTarget);
     };
     const handleClose = () => {
+        console.log("hello")
         setOpen(false)
     };
 
@@ -106,7 +116,7 @@ const Navbaar = () => {
         } else {
             setAccount(false);
             setOpen(false)
-            toast.success("user Logout 😃!", {
+            toast.success("user Logout !", {
                 position: "top-center"
             });
             history.push("/");
@@ -149,7 +159,7 @@ const Navbaar = () => {
                             placeholder="Search Your Products" />
                         <div className="search_icon">
                             <i className="fas fa-search" id="search"></i>
-                        </div>
+                        {/* </div>
                         {
                             text &&
                             <List className="extrasearch" hidden={liopen}>
@@ -164,7 +174,7 @@ const Navbaar = () => {
                                 }
                             </List>
                         }
-                    </div>
+                    </div> */}
                 </div>
                 <div className="right">
                     <div className="nav_btn">
@@ -196,7 +206,7 @@ const Navbaar = () => {
                             <Avatar className="avtar"
                                 onClick={handleClick} />
                     }
-
+{/* 
                     <div className="menu_div">
                         <Menu
                             anchorEl={open}
@@ -204,11 +214,14 @@ const Navbaar = () => {
                             onClose={handleClose}
                             className={classes.component}
                         >
-                            <MenuItem onClick={handleClose} style={{ margin: 10 }}>My account</MenuItem>
+                            {/* <MenuItem onClick={handleClose} style={{ margin: 10 }}>My account</MenuItem>
                             {account ? <MenuItem onClick={handleClose} style={{ margin: 10 }} onClick={logoutuser}><LogoutIcon style={{ fontSize: 16, marginRight: 3 }} />   Logout</MenuItem> : ""}
-                        </Menu>
-                    </div>
+                        </Menu> 
+                    </div> */}
                     <ToastContainer />
+                </div>
+                </div>
+
                 </div>
             </nav>
         </header>
@@ -216,7 +229,7 @@ const Navbaar = () => {
 }
 
 export default Navbaar;
-
+{/* 
 
 // account ? <Button id="basic-button"
 // aria-controls="basic-menu"
@@ -227,4 +240,4 @@ export default Navbaar;
 //     aria-haspopup="true"
 //     aria-expanded={open ? 'true' : undefined}
 //     onClick={handleClick}> <Avatar className="avtar" />
-// </Button>
+// </Button> */}
