@@ -1,6 +1,5 @@
-.home_section .products_section{
-    /* padding: 10px 20px; */
-    width: 98%;
+/* .home_section .products_section{
+     
     margin:10px auto;
     background-color: #fff;
     border-radius: 4px;
@@ -29,7 +28,7 @@
 
 .center_img img{
     display: block;
-    /* margin-top: 13px; */
+   
     width: 80%;
     margin: 13px auto;
 }
@@ -103,7 +102,7 @@
 
 .products_section .products_items p{
     margin-top: 10px;
-}
+} */
 
 @media (max-width:768px){
     .slide_part .right_slide{
