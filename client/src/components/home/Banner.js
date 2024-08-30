@@ -16,7 +16,7 @@ const Banner = () => {
     return (
         <>
 
-            <Carousel
+            {/* <Carousel
                 className="carasousel"
                 autoPlay={true}
                 animation="slide"
@@ -42,7 +42,7 @@ const Banner = () => {
                     })
                 }
 
-            </Carousel>
+            </Carousel> */}
         </>
     )
 }
