@@ -9,6 +9,7 @@ import "../home/banner.css";
 //     "https://rukminim1.flixcart.com/flap/1680/280/image/685712c6cefb3c02.jpg?q=50"
 // ]
 
+
 // console.log(data);
 
 const Banner = () => {
